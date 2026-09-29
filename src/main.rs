@@ -8,11 +8,10 @@ use rtt_target::{rprintln, rtt_init_print};
 
 #[entry]
 fn main() -> ! {
-    rtt_init_print!();
-    rprintln!("asd");
+    let mut ticker: i32 = 0;
     loop {
-        rprintln!("lel");
-        for _ in 0..100_000 {
+        ticker += 1;
+        for _ in 0..ticker {
             nop();
         }
     }
